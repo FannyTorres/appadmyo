@@ -1,0 +1,31 @@
+<ion-menu [content]="content">
+    <ion-header>
+        <img src="../../assets/imgs/1920.jpg" class="img-fluid"/>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item (click)="abrirpagina(imagen)">
+          <ion-icon name="stats" class="p-r-10"></ion-icon>Imagen
+        </button>
+        <button ion-item (click)="abrirpagina(riesgo)">
+          <ion-icon name="warning" class="p-r-10"></ion-icon>Riesgo
+        </button>
+        <button ion-item (click)="abrirpagina(empresa)">
+          <ion-icon name="build" class="p-r-10"></ion-icon>Empresa
+        </button>
+        <button ion-item (click)="abrirpagina(usuarios)">
+          <ion-icon name="people" class="p-r-10"></ion-icon>Usuarios
+        </button>
+        <button ion-item (click)="abrirpagina(soporte)">
+          <ion-icon name="help-circle" class="p-r-10"></ion-icon>Soporte
+        </button>
+        <button ion-item (click)="abrirpagina(soporte)">
+          <ion-icon name="log-out" class="p-r-10"></ion-icon>Cerrar Sesión
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  
+
+<ion-nav [root]="rootPage" #content></ion-nav>

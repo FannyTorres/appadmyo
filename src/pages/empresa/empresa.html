@@ -1,0 +1,363 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons>
+          <button ion-button
+                  icon-only
+                  menuToggle>
+            <ion-icon name="menu"></ion-icon><ion-title>Empresa</ion-title>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+      <ion-segment [(ngModel)]="Empresa">
+        <ion-segment-button value="dempresa">
+            <ion-icon name="bookmark"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="dcontacto">
+            <ion-icon name="call"></ion-icon>  
+        </ion-segment-button>
+        <ion-segment-button value="pys">
+            <ion-icon name="cart"></ion-icon> 
+          </ion-segment-button>
+          <ion-segment-button value="certificaciones">
+              <ion-icon name="ribbon"></ion-icon>    
+            </ion-segment-button>
+            <ion-segment-button value="asociaciones">
+                <ion-icon name="contacts"></ion-icon>    
+              </ion-segment-button>
+              <ion-segment-button value="notificaciones">
+                  <ion-icon name="notifications"></ion-icon>   
+                </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div [ngSwitch]="Empresa">
+        <ion-list *ngSwitchCase="'dempresa'">
+           <div text-center>Datos de empresa<br>
+           <img src="../../assets/imgs/pleca.png"/></div> 
+           
+              <ion-list>
+
+                  <ion-item>
+                    <ion-label stacked>Nombre o razón social</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>Nombre Comercial</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>R.F.C. (Registro Federal de Contribuyentes)</ion-label>
+                        <ion-input type="text"></ion-input>
+                      </ion-item>
+                      <ion-item text-center>
+                        <button ion-button round><ion-icon name="archive" class="p-r-10"></ion-icon>Guardar</button>
+                      </ion-item>
+                      <ion-item text-center>
+                        <button ion-button outline>Giro</button>
+                        <button ion-button outline>Marcas</button>
+                      </ion-item>
+                      <div text-center class="p-t-10">Subir Logotipo<br>
+                        <div>Peso maximo de 2MB, Formatos jpg, png</div>
+                      <img src="../../assets/imgs/cambiarlogo.svg"/>
+                      </div>
+                      <ion-item text-center>
+                        <button ion-button round><ion-icon name="archive" class="p-r-10"></ion-icon>Subir Logotipo</button>
+                      </ion-item>
+                    
+                </ion-list>
+
+           
+        </ion-list>
+  
+        <ion-list *ngSwitchCase="'dcontacto'">
+            <div text-center>Datos de Contacto<br>
+            <img src="../../assets/imgs/pleca.png" class="slide-image"/></div>
+            <ion-list>
+
+              <ion-item>
+                <ion-label stacked>Pagina Web</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label stacked>Direción (Calle y Número)</ion-label>
+                  <ion-input type="text"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label stacked>Colonia</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label stacked>Delegación / Municipio</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label stacked>Código Postal</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                    <ion-label stacked>Estado</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item text-center>
+                    <button ion-button round><ion-icon name="archive" class="p-r-10"></ion-icon>Guardar</button>
+                </ion-item>
+                <div text-center>Telefonos</div>
+                <ion-item>
+                  <ion-label stacked>Telefono</ion-label>
+                  <ion-input type="num"></ion-input>
+                </ion-item>
+                <ion-item text-center>
+                  <button ion-button outline>Editar</button>
+                  <button ion-button outline>Quitar</button>
+                </ion-item>
+                
+                
+            </ion-list>
+
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'pys'">
+            <div text-center>Gestión de Productos y Servicios<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-card>
+
+              <img src="../../assets/imgs/producto.png"/>
+          
+              <ion-card-content>
+                <ion-card-title>
+                  Descripción del producto
+                </ion-card-title>
+                <p>
+                  The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                </p>
+              </ion-card-content>
+          
+             <ion-row no-padding>
+                <ion-col>
+                  <button ion-button clear small color="primary" icon-start>
+                    <ion-icon name='create'></ion-icon>
+                    Editar
+                  </button>
+                </ion-col>
+                <ion-col text-center>
+                  <button ion-button clear small color="primary" icon-start>
+                    <ion-icon name='close'></ion-icon>
+                    Quitar
+                  </button>
+                </ion-col>
+                
+              </ion-row>
+          
+            </ion-card>
+          
+        </ion-list>
+
+          <ion-list *ngSwitchCase="'certificaciones'">
+            <div text-center>Certificaiones<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-list>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="../../assets/imgs/1920.jpg"/>
+                  </ion-avatar>
+                  <h3>ISO 90014</h3>
+                  <p>Fecha: 2016-11-11</p>
+                  <p>Calificación:8.40</p>
+                </ion-item>
+                <ion-row no-padding>
+                    <ion-col>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='create'></ion-icon>
+                        Editar
+                      </button>
+                    </ion-col>
+                    <ion-col text-center>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='close'></ion-icon>
+                        Quitar
+                      </button>
+                    </ion-col>
+                    <ion-col text-right>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='eye'></ion-icon>
+                        Ver
+                      </button>
+                    </ion-col>
+                  </ion-row>
+                  <ion-item>
+                      <ion-avatar item-start>
+                        <img src="../../assets/imgs/1920.jpg"/>
+                      </ion-avatar>
+                      <h3>ISO 90014</h3>
+                      <p>Fecha: 2016-11-11</p>
+                      <p>Calificación:8.40</p>
+                    </ion-item>
+                    <ion-row no-padding>
+                        <ion-col>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='create'></ion-icon>
+                            Editar
+                          </button>
+                        </ion-col>
+                        <ion-col text-center>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='close'></ion-icon>
+                            Quitar
+                          </button>
+                        </ion-col>
+                        <ion-col text-right>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='eye'></ion-icon>
+                            Ver
+                          </button>
+                        </ion-col>
+                      </ion-row>
+              </ion-list>
+            
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'asociaciones'">
+            <div text-center>Asociaciones o Camaras<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-list>
+                <ion-item>
+                  <ion-avatar item-start>
+                    <img src="../../assets/imgs/1920.jpg"/>
+                  </ion-avatar>
+                  <h3>ISO 90014</h3>
+                  <p>Fecha: 2016-11-11</p>
+                  <p>Calificación:8.40</p>
+                </ion-item>
+                <ion-row no-padding>
+                    <ion-col>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='create'></ion-icon>
+                        Editar
+                      </button>
+                    </ion-col>
+                    <ion-col text-center>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='close'></ion-icon>
+                        Quitar
+                      </button>
+                    </ion-col>
+                    <ion-col text-right>
+                      <button ion-button clear small color="primary" icon-start>
+                        <ion-icon name='eye'></ion-icon>
+                        Ver
+                      </button>
+                    </ion-col>
+                  </ion-row>
+                  <ion-item>
+                      <ion-avatar item-start>
+                        <img src="../../assets/imgs/1920.jpg"/>
+                      </ion-avatar>
+                      <h3>ISO 90014</h3>
+                      <p>Fecha: 2016-11-11</p>
+                      <p>Calificación:8.40</p>
+                    </ion-item>
+                    <ion-row no-padding>
+                        <ion-col>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='create'></ion-icon>
+                            Editar
+                          </button>
+                        </ion-col>
+                        <ion-col text-center>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='close'></ion-icon>
+                            Quitar
+                          </button>
+                        </ion-col>
+                        <ion-col text-right>
+                          <button ion-button clear small color="primary" icon-start>
+                            <ion-icon name='eye'></ion-icon>
+                            Ver
+                          </button>
+                        </ion-col>
+                      </ion-row>
+              </ion-list>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'notificaciones'">
+            <div text-center>Notificaciones<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            
+                <ion-list>
+
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>La empresa Marcos Ortiz lo ha calificado como Cliente</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>Raiders of the Lost Ark</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>Ghostbusters</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>Batman</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>Back to the Future</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>The Empire Strikes Back</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                    <ion-item>
+                      <ion-thumbnail item-start>
+                        <img src="../../assets/imgs/1920.jpg">
+                      </ion-thumbnail>
+                      <h2>The Terminator</h2>
+                      <p>2018-07-12 • 16:55:22</p>
+                      <button ion-button clear item-end>VER</button>
+                    </ion-item>
+                
+                  </ion-list>
+            
+          </ion-list>
+      </div>
+  
+
+
+
+    
+
+</ion-content>

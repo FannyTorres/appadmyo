@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons>
+          <button ion-button
+                  icon-only
+                  menuToggle>
+            <ion-icon name="menu"></ion-icon><ion-title>Calificar</ion-title>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+      <ion-segment [(ngModel)]="Calificar">
+        <ion-segment-button value="cliente">
+          Cliente
+        </ion-segment-button>
+        <ion-segment-button value="proveedor">
+          Proveedor
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div [ngSwitch]="Calificar">
+        <ion-list *ngSwitchCase="'cliente'">
+            <div text-center>Datos del Cliente<br>
+              <img src="../../assets/imgs/pleca.png"/></div>
+              <ion-list>
+                  <ion-item>
+                    <ion-label stacked>Nombre o Razón Social</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>R.F.C. (Registro Federal de Contribuyentes)</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Correo Electronico</ion-label>
+                        <ion-input type="email"></ion-input>
+                      </ion-item>
+                      <ion-item text-center>
+                        <button ion-button round><ion-icon name="checkmark" class="p-r-10"></ion-icon>Calificar Cliente</button>
+                      </ion-item>
+                </ion-list>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'proveedor'">
+            <div text-center>Datos del Proveedor<br>
+              <img src="../../assets/imgs/pleca.png"/></div>
+              <ion-list>
+                  <ion-item>
+                    <ion-label stacked>Nombre o Razón Social</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>R.F.C. (Registro Federal de Contribuyentes)</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Correo Electronico</ion-label>
+                        <ion-input type="email"></ion-input>
+                      </ion-item>
+                      <ion-item text-center>
+                        <button ion-button round><ion-icon name="checkmark" class="p-r-10"></ion-icon>Calificar Proveedor</button>
+                      </ion-item>
+                </ion-list>
+        </ion-list>
+    </div>
+
+</ion-content>

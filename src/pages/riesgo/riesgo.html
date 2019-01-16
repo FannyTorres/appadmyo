@@ -1,0 +1,100 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons>
+          <button ion-button
+                  icon-only
+                  menuToggle>
+            <ion-icon name="menu"></ion-icon> <ion-title>Riesgo</ion-title>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+    <ion-segment [(ngModel)]="Riesgo">
+      <ion-segment-button value="rcliente">
+        CLIENTE
+      </ion-segment-button>
+      <ion-segment-button value="rproveedor">
+        PROVEEDOR   
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div [ngSwitch]="Riesgo">
+        <ion-list *ngSwitchCase="'rcliente'">
+            <div text-center class="txt-black">Riesgo</div>
+            <div text-center class="txt-orange" >
+                Como <span class="txt-blue">cliente</span> basado en calificaciones<br> de <span class="txt-blue">proveedores</span>
+            </div>
+            <ion-item text-center>
+              <button ion-button outline>mes</button>
+              <button ion-button outline>12 meses</button>
+            </ion-item>
+            <div text-center class="txt-blue">Numero de Calificaciones </div>
+            <div text-center class="number">5</div>
+  
+            <ion-item text-center>
+              <button ion-button round>Ver Detalles</button>
+          </ion-item>
+          <ion-item text-center class="txt-blue">
+              Calificación Media <br>
+              <div text-center class="number">70</div>
+              <div text-center class="percent">30%</div>
+          </ion-item>
+          <ion-item text-center class="txt-blue">
+              Evolución <br>
+              <div text-center class="number">7</div>
+              <div text-center class="percent-green">30%</div>
+         </ion-item>
+         <ion-item text-center class="txt-blue">
+           Cumplimiento<br> 
+           <img src="../../assets/imgs/pleca.png" text-center/><br>
+           <img src="../../assets/imgs/grafpie.jpg" text-center/>
+         </ion-item>
+         <ion-item text-center class="txt-blue">
+            Calidad<br>
+            <img src="../../assets/imgs/pleca.png" text-center/><br>
+           <img src="../../assets/imgs/grafpie.jpg" text-center/>
+          </ion-item>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'rproveedor'">
+            <div text-center class="txt-black">Riesgo</div>
+              <div text-center class="txt-orange" >
+                  Como <span class="txt-blue">proveedor</span> basado en calificaciones<br> de <span class="txt-blue">clientes </span>
+              </div>
+              <ion-item text-center>
+                <button ion-button outline>mes</button>
+                <button ion-button outline>12 meses</button>
+              </ion-item>
+            
+              <div text-center class="txt-blue">Numero de Calificaciones </div>
+              <div text-center class="number">6</div>
+  
+              <ion-item text-center>
+                <button ion-button round>Ver Detalles</button>
+            </ion-item>
+            <ion-item text-center class="txt-blue">
+                Calificación Media <br>
+                <div text-center class="number">60</div>
+                <div text-center class="percent">30%</div>
+            </ion-item>
+            <ion-item text-center class="txt-blue">
+                Evolución <br>
+                <div text-center class="number">9</div>
+                <div text-center class="percent-green">30%</div>
+           </ion-item>
+           <ion-item text-center class="txt-blue">
+             Cumplimiento<br> 
+             <img src="../../assets/imgs/pleca.png" text-center/><br>
+           <img src="../../assets/imgs/grafpie.jpg" text-center/>
+           </ion-item>
+           <ion-item text-center class="txt-blue">
+              Calidad<br>
+              <img src="../../assets/imgs/pleca.png" text-center/><br>
+           <img src="../../assets/imgs/grafpie.jpg" text-center/>
+            </ion-item>
+        </ion-list>
+      </div>
+
+</ion-content>

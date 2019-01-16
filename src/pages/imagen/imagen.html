@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-navbar color="primary">
+      <ion-buttons>
+          <button ion-button
+                  icon-only
+                  (click)="menu()">
+            <ion-icon name="menu"></ion-icon> <ion-title>Imagen</ion-title>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+      <ion-segment [(ngModel)]="Imagen">
+        <ion-segment-button value="icliente">
+          CLIENTE 
+        </ion-segment-button>
+        <ion-segment-button value="iproveedor">
+          PROVEEDOR   
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div [ngSwitch]="Imagen">
+      <ion-list *ngSwitchCase="'icliente'">
+          <div text-center class="txt-black">Mi imagen</div>
+          <div text-center class="txt-orange" >
+              Como <span class="txt-blue">cliente</span> basado en calificaciones<br> de <span class="txt-blue">proveedores</span>
+          </div>
+         <ion-item>
+            <button ion-button outline col-6>mes</button>
+            <button ion-button outline col-6>12 meses</button>
+          </ion-item>
+          <div text-center class="txt-blue">Número de Calificaciones</div>
+          <div text-center class="number">9</div>
+
+          <ion-item text-center>
+            <button ion-button round (click)="verdetalles()">Ver Detalles</button>
+        </ion-item>
+        <ion-item text-center class="txt-blue">
+            Calificación Media <br>
+            <div text-center class="number">50</div>
+            <div text-center class="percent">30%</div>
+        </ion-item>
+        <ion-item text-center class="txt-blue">
+            Evolución <br>
+            <div text-center class="number">8</div>
+            <div text-center class="percent-green">30%</div>
+       </ion-item>
+       <ion-item text-center class="txt-blue">
+         Cumplimiento<br> 
+         <img src="../../assets/imgs/pleca.png" text-center/><br>
+         <img src="../../assets/imgs/grafpie.jpg" text-center/>
+
+       </ion-item>
+       <ion-item text-center class="txt-blue">
+          Calidad<br>
+          <img src="../../assets/imgs/pleca.png" text-center/><br> 
+          <img src="../../assets/imgs/grafpie.jpg" text-center/>
+        </ion-item>
+        
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'iproveedor'">
+          <div text-center class="txt-black">Mi imagen</div>
+            <div text-center class="txt-orange" >
+                Como <span class="txt-blue">proveedor</span> basado en calificaciones<br> de <span class="txt-blue">clientes </span>
+            </div>
+            <ion-item padding>
+              <button ion-button outline col-6>mes</button>
+              <button ion-button outline col-6>12 meses</button>
+            </ion-item>
+          
+            <div text-center class="txt-blue">Número de Calificaciones</div>
+            <div text-center class="number">5</div>
+
+            <ion-item text-center>
+              <button ion-button round>Ver Detalles</button>
+          </ion-item>
+          <ion-item text-center class="txt-blue">
+              Calificación Media <br>
+              <div text-center class="number">70</div>
+              <div text-center class="percent">30%</div>
+          </ion-item>
+          <ion-item text-center class="txt-blue">
+              Evolución <br>
+              <div text-center class="number">7</div>
+              <div text-center class="percent-green">30%</div>
+         </ion-item>
+         <ion-item text-center class="txt-blue">
+           Cumplimiento<br> 
+           <img src="../../assets/imgs/pleca.png" text-center/><br>
+           <img src="../../assets/imgs/grafpie.jpg" text-center/>
+         </ion-item>
+         <ion-item text-center class="txt-blue">
+            Calidad<br>
+            <img src="../../assets/imgs/pleca.png" text-center/><br>
+            <img src="../../assets/imgs/grafpie.jpg" text-center/>
+          </ion-item>
+          <div padding>
+            <button ion-button color="primary" block>Sign In</button>
+          </div>
+      </ion-list>
+    </div>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-tabs color="primary">
+      <ion-tab tabIcon="people" tabTitle="Clientes" [root]="tab1" (click)="tab1"></ion-tab>
+      <ion-tab tabIcon="contact" tabTitle="Proveedores" [root]="tab2" (click)="tab2"></ion-tab>
+      <ion-tab tabIcon="checkmark-circle" tabTitle="Calificar" [root]="tab3"></ion-tab>
+      <ion-tab tabIcon="search" tabTitle="P.Buscado" [root]="tab4"></ion-tab>
+      <ion-tab tabIcon="stats" tabTitle="Imagen" [root]="tab5"></ion-tab>
+    </ion-tabs>    
+  </ion-toolbar>
+</ion-footer>
+

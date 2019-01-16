@@ -1,0 +1,36 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Agregar Usuario</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label stacked>Nombre</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>Apellidos</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Puesto</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>Correo Electronico</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+            <ion-item>
+                <ion-label>Correo Electronico</ion-label>
+                <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Cancelar">
+                  <ion-option value="1">Oculto</ion-option>
+                  <ion-option value="2">Visible</ion-option>
+                </ion-select>
+              </ion-item>
+      </ion-list>
+    <div padding>
+        <button ion-button color="primary" block>Agregar</button>
+      </div>
+</ion-content>

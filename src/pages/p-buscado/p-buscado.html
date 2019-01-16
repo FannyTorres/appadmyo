@@ -1,0 +1,304 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-buttons>
+      <button ion-button
+              icon-only
+              menuToggle>
+        <ion-icon name="menu"></ion-icon><ion-title>Perfil Buscado</ion-title>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+    <ion-segment [(ngModel)]="Empresa">
+      <ion-segment-button value="dempresa">
+          <ion-icon name="bookmark"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="dcontacto">
+          <ion-icon name="call"></ion-icon>  
+      </ion-segment-button>
+      <ion-segment-button value="pys">
+          <ion-icon name="cart"></ion-icon> 
+        </ion-segment-button>
+        <ion-segment-button value="certificaciones">
+            <ion-icon name="ribbon"></ion-icon>    
+          </ion-segment-button>
+          <ion-segment-button value="asociaciones">
+              <ion-icon name="contacts"></ion-icon>    
+            </ion-segment-button>
+            <ion-segment-button value="notificaciones">
+                <ion-icon name="pricetags"></ion-icon>   
+              </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div [ngSwitch]="Empresa">
+        <ion-list *ngSwitchCase="'dempresa'">
+           <div text-center class="p-b-20">Datos de empresa<br>
+           <img src="../../assets/imgs/pleca.png"/><br>
+           <img src="../../assets/imgs/agregar.png"/>
+           </div> 
+              <ion-list>
+
+                  <ion-list>
+                      <ion-list-header>
+                        Nombre o Razón Social
+                      </ion-list-header>
+                      <ion-item>InfoAdmyo S.A. de C.V.</ion-item>
+                      <ion-list-header>
+                          R.F.C. (Registro Federal de Contribuyentes)
+                      </ion-list-header>
+                      <ion-item>IAD120302T35</ion-item>
+                      <ion-list-header>
+                          Tipo de Empresa
+                      </ion-list-header>
+                      <ion-item>Pequeña empresa</ion-item>
+                      <ion-list-header>
+                          N° de empleados
+                      </ion-list-header>
+                      <ion-item>1-10</ion-item>
+                      <ion-list-header>
+                          Descripción de la empresa
+                      </ion-list-header>
+                      <ion-item>Portal de reputación empresarial.<br>Nuestro objetivo es apoyar a las <br>empresas a dandoles la posibilidad<br> de crecer en base a su desempeño</ion-item>
+                    </ion-list>
+                </ion-list>
+
+           
+        </ion-list>
+  
+        <ion-list *ngSwitchCase="'dcontacto'">
+            <div text-center class="p-b-20">Datos de Contacto<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-list>
+                <ion-list-header>
+                    Sitio web
+                  </ion-list-header>
+                  <ion-item>www.admyo.com</ion-item>
+                  <ion-list-header>
+                      Dirección (Calle y Número)
+                    </ion-list-header>
+                    <ion-item>NEWTON 57A-a</ion-item>
+                    <ion-list-header>
+                        Colonia 
+                      </ion-list-header>
+                      <ion-item>Polanco</ion-item>
+                      <ion-list-header>
+                          Delegación / Municipio
+                        </ion-list-header>
+                        <ion-item>Migel Hidalgo</ion-item>
+                        <ion-list-header>
+                            Código Postal
+                          </ion-list-header>
+                          <ion-item>11000</ion-item>
+                          <ion-list-header>
+                              Estado
+                            </ion-list-header>
+                            <ion-item>Distrito Federal</ion-item> 
+                    
+              </ion-list>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'pys'">
+            <div text-center>Productos y Servicios<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-card>
+
+              <img src="../../assets/imgs/producto.png"/>
+          
+              <ion-card-content>
+                <ion-card-title>
+                  Descripción del producto
+                </ion-card-title>
+                <p>
+                  The most popular industrial group ever, and largely responsible for bringing the music to a mass audience.
+                </p>
+              </ion-card-content>
+          
+             <ion-row no-padding>
+                <ion-col text-center>
+                  <button ion-button clear small color="primary" icon-start>
+                    <ion-icon name='eye'></ion-icon>
+                    Ver
+                  </button>
+                </ion-col>
+                
+              </ion-row>
+          
+            </ion-card>
+          
+        </ion-list>
+
+          <ion-list *ngSwitchCase="'certificaciones'">
+            <div text-center>Certificaiones<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-list>
+
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>My Neighbor Totoro</h2>
+                  <p>Hayao Miyazaki • 1988</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Raiders of the Lost Ark</h2>
+                  <p>Steven Spielberg • 1981</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Ghostbusters</h2>
+                  <p>Ivan Reitman • 1984</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Batman</h2>
+                  <p>Tim Burton • 1988</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Back to the Future</h2>
+                  <p>Robert Zemeckis • 1985</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>The Empire Strikes Back</h2>
+                  <p>Irvin Kershner • 1980</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>The Terminator</h2>
+                  <p>James Cameron • 1984</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+              </ion-list>
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'asociaciones'">
+            <div text-center>Asociaciones o Camaras<br> 
+            <img src="../../assets/imgs/pleca.png"/></div>
+            <ion-list>
+
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>My Neighbor Totoro</h2>
+                  <p>Hayao Miyazaki • 1988</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Raiders of the Lost Ark</h2>
+                  <p>Steven Spielberg • 1981</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Ghostbusters</h2>
+                  <p>Ivan Reitman • 1984</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Batman</h2>
+                  <p>Tim Burton • 1988</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>Back to the Future</h2>
+                  <p>Robert Zemeckis • 1985</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>The Empire Strikes Back</h2>
+                  <p>Irvin Kershner • 1980</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+                <ion-item>
+                  <ion-thumbnail item-start>
+                    <img src="../../assets/imgs/1920.jpg">
+                  </ion-thumbnail>
+                  <h2>The Terminator</h2>
+                  <p>James Cameron • 1984</p>
+                  <button ion-button clear item-end>VER</button>
+                </ion-item>
+            
+              </ion-list>
+            </ion-list>
+
+          <ion-list *ngSwitchCase="'notificaciones'">
+            <div text-center>Marcas<br>
+            <img src="../../assets/imgs/pleca.png"/></div>
+                    <ion-list>
+                        <ion-item>
+                          <ion-avatar item-start>
+                            <img src="../../assets/imgs/1920.jpg">
+                          </ion-avatar>
+                          <h2>Cher</h2>
+                          <p>Ugh. As if.</p>
+                        </ion-item>
+                        <ion-item>
+                            <ion-avatar item-start>
+                              <img src="../../assets/imgs/1920.jpg">
+                            </ion-avatar>
+                            <h2>Cher</h2>
+                            <p>Ugh. As if.</p>
+                          </ion-item>
+                          <ion-item>
+                              <ion-avatar item-start>
+                                <img src="../../assets/imgs/1920.jpg">
+                              </ion-avatar>
+                              <h2>Cher</h2>
+                              <p>Ugh. As if.</p>
+                            </ion-item>
+                      </ion-list>
+          </ion-list>
+      </div>
+
+</ion-content>

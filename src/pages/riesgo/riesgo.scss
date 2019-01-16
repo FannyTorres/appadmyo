@@ -1,0 +1,32 @@
+page-riesgo {
+
+$colorblue:#005d8f;
+$colororange:#f7ac43;
+$colorblack:#040202;
+
+.txt-orange{
+    color:$colororange;
+    font-size: 2rem;
+} 
+.txt-blue{
+    color: $colorblue;
+    font-size: 2rem; 
+}
+.txt-black{
+    color: $colorblack;
+    font-size: 2.5rem;
+}
+.number{
+    color: $colororange;
+    font-size:5rem;
+  }
+.percent{
+    color: red;
+    font-size:2rem;
+  }
+.percent-green{
+    color: green;
+    font-size:2rem;
+  }
+
+}

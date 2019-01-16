@@ -1,0 +1,70 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-buttons>
+      <button ion-button
+              icon-only
+              menuToggle>
+        <ion-icon name="menu"></ion-icon> <ion-title>Usuarios</ion-title>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+      <ion-segment [(ngModel)]="Usuario">
+        <ion-segment-button value="dusuario">
+          Datos de usuario 
+        </ion-segment-button>
+        <ion-segment-button value="contraseña">
+          Cambio de contraseña  
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-fab right bottom>
+        <button ion-fab color="secondary" (click)="listadeusuarios()"><ion-icon name="list"></ion-icon></button>
+        
+      </ion-fab>
+    <div [ngSwitch]="Usuario">
+        <ion-list *ngSwitchCase="'dusuario'">
+              <ion-list>
+                  <ion-item>
+                    <ion-label stacked>Nombre</ion-label>
+                    <ion-input type="text"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>Apellidos</ion-label>
+                      <ion-input type="text"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Correo Electronico</ion-label>
+                        <ion-input type="email"></ion-input>
+                      </ion-item>
+                      <ion-item text-center>
+                        <button ion-button round><ion-icon name="archive" class="p-r-10"></ion-icon>Guardar</button>
+                      </ion-item>
+                </ion-list>
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'contraseña'">
+            <ion-list>
+                <ion-item>
+                    <ion-label stacked>Contraseña Acual</ion-label>
+                    <ion-input type="password"></ion-input>
+                  </ion-item>
+                  <ion-item>
+                      <ion-label stacked>Nueva Contraseña</ion-label>
+                      <ion-input type="password"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label stacked>Confirmar Contraseña</ion-label>
+                        <ion-input type="password"></ion-input>
+                      </ion-item>
+                    <ion-item text-center>
+                        <button ion-button round><ion-icon name="archive" class="p-r-10"></ion-icon>Guardar</button>
+                      </ion-item>
+              </ion-list>
+        </ion-list>
+      </div>
+
+</ion-content>

@@ -1,0 +1,46 @@
+page-home {
+
+  $colorblue: #005d8f;
+  $tipbase:"FBase";
+ 
+  $tp:"Prosto One";
+
+        
+      .slide-title {
+        margin-top: 2.8rem;
+        font-family: $tp;
+        color: $colorblue;
+      }
+      
+      .slide-image {
+        max-height: 50%;
+        max-width: 80%;
+        margin: 50px 0;
+      }
+      
+      
+      .bg-img{
+        background-image: url('../../assets/imgs/portada-gris.jpg');
+        background-position: cover;
+      }
+      .list > .item-block:first-child {
+        border: medium none;
+      }
+    
+      .item {
+        margin-bottom: 10px;
+        background: rgba(255, 255, 255, 0.5);
+        border: medium none;
+    
+        .text-input {
+          color: $colorblue;
+        }
+
+        *::-webkit-input-placeholder  {
+          color: $colorblue!important;
+        }
+    
+      }
+      
+
+}

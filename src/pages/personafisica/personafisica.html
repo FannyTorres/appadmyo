@@ -1,0 +1,95 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Persona Física</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <ion-label stacked>Razón Social</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label stacked>Nombre Comercial</ion-label>
+          <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>R.F.C (Registro Federal de Contribuyentes)</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label>Sector</ion-label>
+            <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Cancelar">
+              <ion-option value="dos">DOS</ion-option>
+              <ion-option value="lunix">Linux</ion-option>
+              <ion-option value="mac7">Mac OS 7</ion-option>
+              <ion-option value="mac8">Mac OS 8</ion-option>
+              <ion-option value="win3.1">Windows 3.1</ion-option>
+              <ion-option value="win95">Windows 95</ion-option>
+              <ion-option value="win98">Windows 98</ion-option>
+            </ion-select>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Subsector</ion-label>
+              <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Cancelar">
+                <ion-option value="dos">DOS</ion-option>
+                <ion-option value="lunix">Linux</ion-option>
+                <ion-option value="mac7">Mac OS 7</ion-option>
+                <ion-option value="mac8">Mac OS 8</ion-option>
+                <ion-option value="win3.1">Windows 3.1</ion-option>
+                <ion-option value="win95">Windows 95</ion-option>
+                <ion-option value="win98">Windows 98</ion-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Rama</ion-label>
+                <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Cancelar">
+                  <ion-option value="dos">DOS</ion-option>
+                  <ion-option value="lunix">Linux</ion-option>
+                  <ion-option value="mac7">Mac OS 7</ion-option>
+                  <ion-option value="mac8">Mac OS 8</ion-option>
+                  <ion-option value="win3.1">Windows 3.1</ion-option>
+                  <ion-option value="win95">Windows 95</ion-option>
+                  <ion-option value="win98">Windows 98</ion-option>
+                </ion-select>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label>Estado</ion-label>
+                  <ion-select [(ngModel)]="os" submitText="Okay" cancelText="Cancelar">
+                    <ion-option value="dos">DOS</ion-option>
+                    <ion-option value="lunix">Linux</ion-option>
+                    <ion-option value="mac7">Mac OS 7</ion-option>
+                    <ion-option value="mac8">Mac OS 8</ion-option>
+                    <ion-option value="win3.1">Windows 3.1</ion-option>
+                    <ion-option value="win95">Windows 95</ion-option>
+                    <ion-option value="win98">Windows 98</ion-option>
+                  </ion-select>
+                </ion-item>
+  
+          <ion-item>
+              <ion-label stacked>Correo Electronico</ion-label>
+              <ion-input type="email"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label stacked>Contraseña</ion-label>
+              <ion-input type="password"></ion-input>
+          </ion-item>
+  
+          <ion-item>
+              <ion-label stacked>Confirmar contraseña</ion-label>
+              <ion-input type="password"></ion-input>
+          </ion-item>
+      </ion-list>
+      <ion-item text-center>
+          <button ion-button full>Entrar</button>
+      </ion-item>
+</ion-content>

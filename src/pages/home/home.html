@@ -1,0 +1,55 @@
+<ion-content padding text-center class="bg-img">
+    <ion-slides pager>
+
+        <!-- Código para crear slides -->
+          <ion-slide>
+            <img src="../../assets/imgs/logo_admyo.svg" class="slide-image"/>
+            <h2 class="slide-title">"Exige a tus clientes y proveedores que te valoren para mejorar tu reputación.</h2>
+          </ion-slide>
+          <!-- Fin del ngFor -->
+
+          <ion-slide>
+            <img src="../../assets/imgs/logo_admyo.svg" class="slide-image"/>
+            <h2 class="slide-title">Login</h2>
+            <ion-row class="p-t-10">
+                <ion-list>
+                    <ion-item>
+                      <ion-input type="text" autofocus autocomplete="off" placeholder="e-mail:"></ion-input>
+                    </ion-item> 
+                    <ion-item>
+                      <ion-input type="password" placeholder="Contraseña:"></ion-input>
+                    </ion-item>
+                  </ion-list>
+                <ion-col col-12><button ion-button color="secundary" round outline (click)="imagen()">ENTRAR</button></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-12 class="p-t-30" text-center>
+                      Recuerda que al iniciar sesión acepta nuestros 
+                      <a href="#" (click)="abrirterminosycondiciones()">"terminos y condiciones"</a> y 
+                      <a href="#"  (click)="abriravisodeprivacidad()">"aviso de privacidad"</a>
+                  </ion-col>
+              </ion-row>
+          </ion-slide>
+    
+          <!-- Ultimo Slide -->
+          <ion-slide>
+            <img src="../../assets/imgs/logo_admyo.svg" class="slide-image"/>
+            <h2 class="slide-title">Registro</h2>
+            <ion-row class="p-t-20">
+                <ion-col col-12><button ion-button color="secundary" round outline (click)="pfisica()">Persona Física</button></ion-col>
+                <ion-col col-12><button ion-button color="secundary" round outline (click)="pmoral()">Persona Moral</button></ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col col-12 class="p-t-90" text-center>
+                      Recuerda que al registrarte aceptas nuestros 
+                      <a href="#" (click)="abrirterminosycondiciones()">"terminos y condiciones"</a> y 
+                      <a href="#"  (click)="abriravisodeprivacidad()">"aviso de privacidad"</a>
+                  </ion-col>
+              </ion-row>
+          </ion-slide>
+          <!-- Fin del último slide -->
+    
+        </ion-slides>
+  
+</ion-content>
+

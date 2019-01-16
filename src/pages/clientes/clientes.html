@@ -1,0 +1,87 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons>
+          <button ion-button
+                  icon-only
+                  menuToggle>
+            <ion-icon name="menu"></ion-icon><ion-title>Clientes</ion-title>
+          </button>
+        </ion-buttons>
+  </ion-navbar>
+  <ion-toolbar no-border-top color>
+      <ion-segment [(ngModel)]="Clientes">
+        <ion-segment-button value="resumen">
+          Resumen 
+        </ion-segment-button>
+        <ion-segment-button value="calificaciones">
+          Calificaciones   
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <div [ngSwitch]="Clientes">
+        <ion-list *ngSwitchCase="'resumen'">
+          <div text-center>Calificaciones realizadas a clientes en el ultimo trimestre<br>
+              <img src="../../assets/imgs/pleca.png"/><br>
+              <img src="../../assets/imgs/agregar.png"/>
+          </div>
+          <div text-center>Número de clientes registrados<br>
+            <img src="../../assets/imgs/pleca.png"/><br>
+            <img src="../../assets/imgs/agregar.png"/>
+        </div>
+        <div text-center>Número de calificaciones realizadas a clientes<br>
+          <img src="../../assets/imgs/pleca.png"/><br>
+          <img src="../../assets/imgs/agregar.png"/>
+      </div>
+      <div text-center>Promedio en número de calificaciones realizadas por clientes<br>
+        <img src="../../assets/imgs/pleca.png"/><br>
+        <img src="../../assets/imgs/agregar.png"/>
+    </div>
+            
+        </ion-list>
+    
+        <ion-list *ngSwitchCase="'calificaciones'">
+            <div text-center>Calificaciones Realizadas<br>
+              <img src="../../assets/imgs/pleca.png"/></div>
+              <ion-card>
+  
+                <img src="../../assets/imgs/producto.png"/>
+            
+                <ion-card-content>
+                  <p>
+                      Estatus:<br>
+                      Fecha: 2016-11-11<br>
+                      Razón Social:<br>
+                      Nombre Comercial:<br>
+                      Calificación:<br>
+                  </p>
+                </ion-card-content>
+            
+               <ion-row no-padding>
+                  
+                      <ion-col>
+                        <button ion-button clear small color="primary" icon-start>
+                          <ion-icon name='call'></ion-icon>
+                          Contactar
+                        </button>
+                      </ion-col>
+                      <ion-col text-center>
+                        <button ion-button clear small color="primary" icon-start>
+                          <ion-icon name='person'></ion-icon>
+                          Perfil
+                        </button>
+                      </ion-col>
+                      <ion-col text-right>
+                        <button ion-button clear small color="primary" icon-start>
+                          <ion-icon name='arrow-round-down'></ion-icon>
+                          Baja Cliente
+                        </button>
+                      </ion-col>
+                    </ion-row>
+              </ion-card>
+        </ion-list>
+    </div>
+
+</ion-content>

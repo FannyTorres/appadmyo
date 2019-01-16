@@ -1,0 +1,57 @@
+page-registro {
+
+        @font-face {
+            font-family: "FBase";
+            src: url("fonts/Prosto_One.ttf");
+          }
+          $tipbase:"FBase";
+          $colorwhite: #FFFFFF;
+          $colorblue:#005d8f;
+          $colororange:#f7ac43;
+          $colorgrey:#C8C1BF;
+          $colorblack:#040202;
+          $colortex:#808080;
+          $spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50,55,60,65,70, 75,80,85,90,95,100,110,120,130,140);
+          $sides: (top, bottom, left, right);
+          @each $space in $spaceamounts {
+            @each $side in $sides {
+              .m-#{str-slice($side, 0, 1)}-#{$space} {
+                margin-#{$side}: #{$space}px !important;
+              }
+              .p-#{str-slice($side, 0, 1)}-#{$space} {
+                padding-#{$side}: #{$space}px !important;
+              }
+            }
+          }
+          $tp:"Prosto One";
+          *{
+              padding: 0;
+              margin: 0; 
+          }
+          @font-face {
+            font-family: 'Material Icons';
+            font-style: normal;
+            font-weight: 400;
+            src: url(../fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+            src: local('Material Icons'),
+                 local('MaterialIcons-Regular'),
+                 url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+                 url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+                 url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+          }
+    .toolbar, .segmeted, .toolbar-content-md{
+        background: $colorblue;
+        color: $colorwhite !important;
+        font-family: $tp;
+        &.active{
+            background: $colororange;
+            color: $colorwhite;
+        }
+    }
+    .toolbar{
+      
+    }
+    
+   
+    
+}
